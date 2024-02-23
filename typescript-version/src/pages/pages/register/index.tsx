@@ -161,16 +161,13 @@ const RegisterPage = () => {
             </Typography>
           </Box>
           <Box sx={{ mb: 6 }}>
-            <Typography variant='h5' sx={{ fontWeight: 600, marginBottom: 1.5 }}>
-              Adventure starts here 🚀
-            </Typography>
-            <Typography variant='body2'>Make your app management easy and fun!</Typography>
+            <Typography variant='body2'>Veuillez renseigner vos informations</Typography>
           </Box>
           <form noValidate autoComplete='off' onSubmit={e => e.preventDefault()}>
-            <TextField autoFocus fullWidth id='username' label='Username' sx={{ marginBottom: 4 }} />
-            <TextField fullWidth type='email' label='Email' sx={{ marginBottom: 4 }} />
+            <TextField autoFocus fullWidth id='username' label="Nom d'utilisateur" sx={{ marginBottom: 4 }} />
+            <TextField fullWidth type='email' label='Adresse mail' sx={{ marginBottom: 4 }} />
             <FormControl fullWidth>
-              <InputLabel htmlFor='auth-register-password'>Password</InputLabel>
+              <InputLabel htmlFor='auth-register-password'>Mot de passe</InputLabel>
               <OutlinedInput
                 label='Password'
                 value={values.password}
@@ -195,57 +192,31 @@ const RegisterPage = () => {
               control={<Checkbox />}
               label={
                 <Fragment>
-                  <span>I agree to </span>
+                  <span>J'accepte les </span>
                   <Link href='/' passHref>
                     <LinkStyled onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
-                      privacy policy & terms
+                      règles d'utilisation de cette application
                     </LinkStyled>
                   </Link>
                 </Fragment>
               }
             />
             <Button fullWidth size='large' type='submit' variant='contained' sx={{ marginBottom: 7 }}>
-              Sign up
+              Créer mon compte
             </Button>
             <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
               <Typography variant='body2' sx={{ marginRight: 2 }}>
-                Already have an account?
+                Avez-vous déjà un compte ?
               </Typography>
               <Typography variant='body2'>
                 <Link passHref href='/pages/login'>
-                  <LinkStyled>Sign in instead</LinkStyled>
+                  <LinkStyled>Se connecter plutôt</LinkStyled>
                 </Link>
               </Typography>
-            </Box>
-            <Divider sx={{ my: 5 }}>or</Divider>
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Link href='/' passHref>
-                <IconButton component='a' onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
-                  <Facebook sx={{ color: '#497ce2' }} />
-                </IconButton>
-              </Link>
-              <Link href='/' passHref>
-                <IconButton component='a' onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
-                  <Twitter sx={{ color: '#1da1f2' }} />
-                </IconButton>
-              </Link>
-              <Link href='/' passHref>
-                <IconButton component='a' onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
-                  <Github
-                    sx={{ color: theme => (theme.palette.mode === 'light' ? '#272727' : theme.palette.grey[300]) }}
-                  />
-                </IconButton>
-              </Link>
-              <Link href='/' passHref>
-                <IconButton component='a' onClick={(e: MouseEvent<HTMLElement>) => e.preventDefault()}>
-                  <Google sx={{ color: '#db4437' }} />
-                </IconButton>
-              </Link>
             </Box>
           </form>
         </CardContent>
       </Card>
-      <FooterIllustrationsV1 />
     </Box>
   )
 }
