@@ -9,7 +9,7 @@ import { useTheme } from '@mui/material/styles'
 import { Settings } from 'src/@core/context/settingsContext'
 
 // ** Footer Content Component
-import FooterContent from './FooterContent'
+// import FooterContent from './FooterContent'
 
 interface Props {
   settings: Settings
@@ -19,7 +19,9 @@ interface Props {
 
 const Footer = (props: Props) => {
   // ** Props
-  const { settings, footerContent: userFooterContent } = props
+  const { settings,
+    // footerContent: userFooterContent
+  } = props
 
   // ** Hook
   const theme = useTheme()

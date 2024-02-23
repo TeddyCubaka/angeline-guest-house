@@ -46,8 +46,8 @@ const Dashboard = () => {
                 icon={<Poll />}
                 color='success'
                 trendNumber='+42%'
-                title='Total Profit'
-                subtitle='Weekly Profit'
+                title='Profits totals'
+                subtitle='Profits hebdomadaires'
               />
             </Grid>
             <Grid item xs={6}>

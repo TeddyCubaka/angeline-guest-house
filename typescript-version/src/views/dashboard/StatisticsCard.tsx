@@ -31,26 +31,26 @@ interface DataType {
 const salesData: DataType[] = [
   {
     stats: '245k',
-    title: 'Sales',
+    title: 'Ventes',
     color: 'primary',
     icon: <TrendingUp sx={{ fontSize: '1.75rem' }} />
   },
   {
     stats: '12.5k',
-    title: 'Customers',
+    title: 'Clients',
     color: 'success',
     icon: <AccountOutline sx={{ fontSize: '1.75rem' }} />
   },
   {
     stats: '1.54k',
     color: 'warning',
-    title: 'Products',
+    title: 'Chambres',
     icon: <CellphoneLink sx={{ fontSize: '1.75rem' }} />
   },
   {
     stats: '$88k',
     color: 'info',
-    title: 'Revenue',
+    title: 'Revenues',
     icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
   }
 ]
@@ -85,7 +85,7 @@ const StatisticsCard = () => {
   return (
     <Card>
       <CardHeader
-        title='Statistics Card'
+        title='Statistiques globaux'
         action={
           <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>
             <DotsVertical />
@@ -93,10 +93,11 @@ const StatisticsCard = () => {
         }
         subheader={
           <Typography variant='body2'>
+            Vous avez
             <Box component='span' sx={{ fontWeight: 600, color: 'text.primary' }}>
-              Total 48.5% growth
+              +49.9%
             </Box>{' '}
-            😎 this month
+            de moyenne d'entrées ce mois-ci
           </Typography>
         }
         titleTypographyProps={{
