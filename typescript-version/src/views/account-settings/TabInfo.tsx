@@ -23,7 +23,7 @@ import DatePicker from 'react-datepicker'
 import DatePickerWrapper from 'src/@core/styles/libs/react-datepicker'
 
 const CustomInput = forwardRef((props, ref) => {
-  return <TextField inputRef={ref} label='Birth Date' fullWidth {...props} />
+  return <TextField inputRef={ref} label='Date de naissance' fullWidth {...props} />
 })
 
 const TabInfo = () => {
@@ -58,30 +58,13 @@ const TabInfo = () => {
             </DatePickerWrapper>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth type='number' label='Phone' placeholder='(123) 456-7890' />
+            <TextField fullWidth type='number' label='Numéro de téléphone' placeholder='(123) 456-7890' />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              fullWidth
-              label='Website'
-              placeholder='https://example.com/'
-              defaultValue='https://themeselection.com/'
-            />
-          </Grid>
+
+
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth>
-              <InputLabel>Country</InputLabel>
-              <Select label='Country' defaultValue='USA'>
-                <MenuItem value='USA'>USA</MenuItem>
-                <MenuItem value='UK'>UK</MenuItem>
-                <MenuItem value='Australia'>Australia</MenuItem>
-                <MenuItem value='Germany'>Germany</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <FormControl fullWidth>
-              <InputLabel id='form-layouts-separator-multiple-select-label'>Languages</InputLabel>
+              <InputLabel id='form-layouts-separator-multiple-select-label'>Langues parlées</InputLabel>
               <Select
                 multiple
                 defaultValue={['English']}
@@ -89,13 +72,13 @@ const TabInfo = () => {
                 labelId='account-settings-multiple-select-label'
                 input={<OutlinedInput label='Languages' id='select-multiple-language' />}
               >
-                <MenuItem value='English'>English</MenuItem>
-                <MenuItem value='French'>French</MenuItem>
-                <MenuItem value='Spanish'>Spanish</MenuItem>
-                <MenuItem value='Portuguese'>Portuguese</MenuItem>
-                <MenuItem value='Italian'>Italian</MenuItem>
-                <MenuItem value='German'>German</MenuItem>
-                <MenuItem value='Arabic'>Arabic</MenuItem>
+                <MenuItem value='English'>Anglais</MenuItem>
+                <MenuItem value='French'>Français</MenuItem>
+                <MenuItem value='Spanish'>Portugais</MenuItem>
+                <MenuItem value='Portuguese'>Lingala</MenuItem>
+                <MenuItem value='Italian'>Swahili</MenuItem>
+                <MenuItem value='German'>Tshiluba</MenuItem>
+                <MenuItem value='Arabic'>Kikongo</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -103,18 +86,17 @@ const TabInfo = () => {
             <FormControl>
               <FormLabel sx={{ fontSize: '0.875rem' }}>Gender</FormLabel>
               <RadioGroup row defaultValue='male' aria-label='gender' name='account-settings-info-radio'>
-                <FormControlLabel value='male' label='Male' control={<Radio />} />
-                <FormControlLabel value='female' label='Female' control={<Radio />} />
-                <FormControlLabel value='other' label='Other' control={<Radio />} />
+                <FormControlLabel value='homme' label='homme' control={<Radio />} />
+                <FormControlLabel value='femme' label='femme' control={<Radio />} />
               </RadioGroup>
             </FormControl>
           </Grid>
           <Grid item xs={12}>
             <Button variant='contained' sx={{ marginRight: 3.5 }}>
-              Save Changes
+              Enreigistrer
             </Button>
             <Button type='reset' variant='outlined' color='secondary' onClick={() => setDate(null)}>
-              Reset
+              Restaurer
             </Button>
           </Grid>
         </Grid>

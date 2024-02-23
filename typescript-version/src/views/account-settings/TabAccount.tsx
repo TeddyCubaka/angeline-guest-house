@@ -69,7 +69,7 @@ const TabAccount = () => {
               <ImgStyled src={imgSrc} alt='Profile Pic' />
               <Box>
                 <ButtonStyled component='label' variant='contained' htmlFor='account-settings-upload-image'>
-                  Upload New Photo
+                  Importer une photo
                   <input
                     hidden
                     type='file'
@@ -79,26 +79,26 @@ const TabAccount = () => {
                   />
                 </ButtonStyled>
                 <ResetButtonStyled color='error' variant='outlined' onClick={() => setImgSrc('/images/avatars/1.png')}>
-                  Reset
+                  Restorer
                 </ResetButtonStyled>
                 <Typography variant='body2' sx={{ marginTop: 5 }}>
-                  Allowed PNG or JPEG. Max size of 800K.
+                  Type permis : PNG ou JPEG. Taille max 800Ko.
                 </Typography>
               </Box>
             </Box>
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Username' placeholder='johnDoe' defaultValue='johnDoe' />
+            <TextField fullWidth label="Nom d'utilisateur" placeholder='johnDoe' defaultValue='johnDoe' />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Name' placeholder='John Doe' defaultValue='John Doe' />
+            <TextField fullWidth label='Nom' placeholder='John Doe' defaultValue='John Doe' />
           </Grid>
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               type='email'
-              label='Email'
+              label='Adresse mail'
               placeholder='johnDoe@example.com'
               defaultValue='johnDoe@example.com'
             />
@@ -126,7 +126,7 @@ const TabAccount = () => {
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField fullWidth label='Company' placeholder='ABC Pvt. Ltd.' defaultValue='ABC Pvt. Ltd.' />
+            <TextField fullWidth label='Company' placeholder='Angeline Guest House' defaultValue='Angeline Guest House' />
           </Grid>
 
           {openAlert ? (
@@ -140,20 +140,17 @@ const TabAccount = () => {
                   </IconButton>
                 }
               >
-                <AlertTitle>Your email is not confirmed. Please check your inbox.</AlertTitle>
-                <Link href='/' onClick={(e: SyntheticEvent) => e.preventDefault()}>
-                  Resend Confirmation
-                </Link>
+                <AlertTitle>Votre adresse mail n'est pas encore confirmé. Veuillez le confirmer d'abord</AlertTitle>
               </Alert>
             </Grid>
           ) : null}
 
           <Grid item xs={12}>
             <Button variant='contained' sx={{ marginRight: 3.5 }}>
-              Save Changes
+              Sauvegarder les données
             </Button>
             <Button type='reset' variant='outlined' color='secondary'>
-              Reset
+              Restaurer
             </Button>
           </Grid>
         </Grid>
