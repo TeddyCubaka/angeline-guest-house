@@ -1,5 +1,6 @@
 // ** Icon imports
-// import Login from 'mdi-material-ui/Login'
+import Login from 'mdi-material-ui/Login'
+
 // import Table from 'mdi-material-ui/Table'
 // import CubeOutline from 'mdi-material-ui/CubeOutline'
 import HomeOutline from 'mdi-material-ui/HomeOutline'
@@ -8,7 +9,8 @@ import HomeOutline from 'mdi-material-ui/HomeOutline'
 import AccountCogOutline from 'mdi-material-ui/AccountCogOutline'
 
 // import CreditCardOutline from 'mdi-material-ui/CreditCardOutline'
-// import AccountPlusOutline from 'mdi-material-ui/AccountPlusOutline'
+import AccountPlusOutline from 'mdi-material-ui/AccountPlusOutline'
+
 // import AlertCircleOutline from 'mdi-material-ui/AlertCircleOutline'
 // import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
 
@@ -28,21 +30,22 @@ const navigation = (): VerticalNavItemsType => {
       path: '/account-settings'
     },
 
-    // {
-    //   sectionTitle: 'autre actions'
-    // },
-    // {
-    //   title: 'Connexion',
-    //   icon: Login,
-    //   path: '/pages/login',
-    //   openInNewTab: true
-    // },
-    // {
-    //   title: 'Enreigistrer un agent',
-    //   icon: AccountPlusOutline,
-    //   path: '/pages/register',
-    //   openInNewTab: true
-    // },
+    {
+      sectionTitle: 'autre actions'
+    },
+    {
+      title: 'Connexion',
+      icon: Login,
+      path: '/pages/login',
+      openInNewTab: true
+    },
+    {
+      title: 'Enreigistrer un agent',
+      icon: AccountPlusOutline,
+      path: '/pages/register',
+      openInNewTab: true
+    },
+
     // {
     //   sectionTitle: 'User Interface'
     // },
